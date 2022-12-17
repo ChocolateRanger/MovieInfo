@@ -1,0 +1,30 @@
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.CardContainer {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-content: space-evenly;
+    justify-content: center;
+    grid-template-columns: auto auto auto;
+}
+
+.Morebtn {
+    width: 12vw;
+    height: 4vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0vh auto 3vh;
+    border-radius: 1vw;
+    background-color: rgb(35, 229, 35);
+    color: white;
+    border: 1px solid rgb(61, 245, 61);
+}
+
+.Morebtn:hover{
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
