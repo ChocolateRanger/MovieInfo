@@ -75,10 +75,11 @@
 
     .btnlogin {
         font-size: .5rem;
+        width: 50px;
     }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:180px) {
     .btnlogin {
         width: 50px;
     }

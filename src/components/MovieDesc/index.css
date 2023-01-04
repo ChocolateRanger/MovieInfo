@@ -10,7 +10,7 @@
 .movie-image {
     display: inline-block;
     height: 30vh;
-    width: 20vw;
+    width: 35vw;
     object-fit: fill;
     margin-right: 2vw;
 }

@@ -13,13 +13,7 @@ const MainPage = (props) => {
   const [result, setResult] = useState([]);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
-
   const navigate = useNavigate();
-
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  }
-
   const handleNextClick = async () => {
 
     setLoading(true);

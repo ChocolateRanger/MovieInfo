@@ -50,9 +50,8 @@
 @media screen and (max-width: 640px) {
     .card {
         width: 60vw;
-        height: 50vh;
+        height: auto;
     }
-
     .images {
         width: 60vw;
     }
