@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@300&display=swap');
+
+
+.mainContainer {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Unbounded', cursive;
+}
+
+.container {
+    height: 50vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(227, 227, 227);
+    overflow: hidden;
+    border-radius: 1.3vw;
+}
+
+.inputfield {
+    margin-top: 4vh;
+    font-size: 0.6rem;
+}
+
+.textfield {
+    border-radius: 0.5vw;
+    border: 1px solid rgb(200, 195, 195);
+    height: 4vh;
+    width: 20vw;
+    padding: 0 2vw;
+}
+
+.headerlogin {
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn {
+    margin-top: 3vh;
+    display: flex;
+    justify-content: center;
+}
+
+
+.btnlogin {
+    background-color: rgba(37, 214, 179, 0.918);
+    border: 1px solid rgb(59, 193, 177);
+    color: white;
+    width: 7vw;
+    font-size: .8rem;
+    padding: .6vh;
+    border: 1px solid rgb(67, 226, 67);
+}
+
+@media screen and (max-width:640px) {
+
+    .container {
+        height: max-content;
+        width: max-content;
+        margin: 0 10vw;
+        padding: 2vh;
+    }
+
+    .textfield {
+        border-radius: 5px;
+        width: 40vw;
+    }
+
+    .btnlogin {
+        font-size: .5rem;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .btnlogin {
+        width: 50px;
+    }
+
+    .textfield {
+        width: 100px;
+    }
+
+}

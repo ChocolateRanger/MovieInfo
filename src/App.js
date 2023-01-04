@@ -1,0 +1,26 @@
+import logo from './logo.svg';
+import './App.css';
+import LoginPage from './components/LoginPage/LoginPage';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MainPage from './components/MainPage/MainPage';
+import MovieDesc from './components/MovieDesc/MovieDesc';
+import { useState } from 'react';
+
+function App() {
+
+  let limit = 6;
+  
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<LoginPage key={LoginPage}/>} />
+          <Route exact path="/home" element={<MainPage limit={limit} key={MainPage}/>} />
+          <Route exact path="/MovieDesc" element={<MovieDesc key={window.location.pathname}/>} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
+}
+
+export default App;

@@ -1,0 +1,62 @@
+.Navbar-container {
+    border-bottom: 5px solid rgb(35, 229, 35);
+    border-bottom-style: double;
+    margin: 2vh 3vw 0;
+    height: auto;
+
+}
+
+.Navbar-container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.logo {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.listItems {
+    display: inline;
+
+}
+
+ul {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    font-weight: 500;
+    font-size: 1rem;
+
+}
+
+li {
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+li a,
+.dropbtn {
+    display: inline-block;
+    color: rgb(93, 91, 91);
+    text-align: center;
+    padding: 2vw;
+    text-decoration: double;
+
+}
+
+li a:hover,
+.dropdown:hover .dropbtn {
+    color: rgb(35, 229, 35);
+}
+
+li.dropdown {
+    display: inline-block;
+}

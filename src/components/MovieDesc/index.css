@@ -1,0 +1,86 @@
+.MovieDescription {
+    margin: 4vw 8vw;
+    display: flex;
+}
+
+.sec1 {
+    flex: 1;
+}
+
+.movie-image {
+    display: inline-block;
+    height: 30vh;
+    width: 20vw;
+    object-fit: fill;
+    margin-right: 2vw;
+}
+
+.overview {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.buttons {
+    margin-top: 10vh;
+
+}
+
+.btn1 {
+    margin-right: 2vw;
+    border-radius: .5rem;
+    font-size: 1rem;
+    padding: .5vh 2vw;
+    background-color: rgb(35, 229, 35);
+    color: white;
+    border: 2px solid green;
+}
+
+.btn2 {
+    border-radius: .5rem;
+    font-size: 1rem;
+    padding: .5vh 2vw;
+    color: rgb(35, 229, 35);
+    background-color: white;
+    border: 2px solid rgb(35, 229, 35);
+    ;
+}
+
+.description {
+    margin: 6vh 8vw;
+}
+
+.section2{
+    margin-left: 5vw;
+    margin-top: 10vh;
+}
+
+.header{
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: rgb(35, 229, 35);
+}
+
+
+.Similar{
+    display: grid;
+    grid-auto-columns: 30%;
+    grid-column-gap: 10px;
+    grid-auto-flow: column;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.SimilarItems{
+    display: flex;
+        flex-direction: column;
+        background: var(--white);
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+        scroll-snap-align: start;
+        transition: all 0.2s;
+    
+}
