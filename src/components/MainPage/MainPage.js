@@ -13,6 +13,8 @@ const MainPage = (props) => {
   const [result, setResult] = useState([]);
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(true);
+  const [totalResults, setTotalResults] = useState(0);
+  const [renderedresult, setRenderedResult] = useState(0);
   const navigate = useNavigate();
   const handleNextClick = async () => {
 
@@ -29,6 +31,7 @@ const MainPage = (props) => {
     fetch(`https://imdb8.p.rapidapi.com/title/v2/find?title=game%20of&titletype=move&limit=${props.limit}&paginationKey=${page + 1}&sortArg=moviemeter%2Casc`, options)
       .then(response => response.json())
       .then((response => {
+        console.log(response);
         setResult(response.results)
         setLoading(false);
         console.log(result);
@@ -37,6 +40,8 @@ const MainPage = (props) => {
           left: 0,
           behavior: 'smooth'
         });
+        setRenderedResult((renderedresult) + (result.length));
+        console.log(renderedresult);
       }))
       .catch(err => console.error(err));
     setPage(page + 1);
@@ -55,6 +60,8 @@ const MainPage = (props) => {
     fetch(`https://imdb8.p.rapidapi.com/title/v2/find?title=game%20of&limit=${props.limit}&sortArg=moviemeter%2Casc`, options)
       .then(response => response.json())
       .then((response => {
+        console.log(response);
+        setTotalResults(response.totalMatches)
         setResult(response.results)
         setLoading(false);
         console.log(result);
@@ -63,6 +70,8 @@ const MainPage = (props) => {
           left: 0,
           behavior: 'smooth'
         });
+        setRenderedResult((renderedresult) + (result.length));
+        console.log(renderedresult);
       }))
       .catch(err => console.error(err));
   }
@@ -96,11 +105,12 @@ const MainPage = (props) => {
           </div>
         })}
       </div>
-      <div>
+      {renderedresult <= totalResults ? <div>
         <button className='Morebtn' onClick={handleNextClick}>
           See More
         </button>
-      </div>
+      </div> : "No More Movies" }
+      
 
 
     </>
