@@ -7,7 +7,7 @@ const Navbar = () => {
         <div className='Navbar-container'>
             <div className='logo'>
                 <a href="/home">
-                    <img src={logo} alt="logo" style={{ width: '5vw', marginLeft:'3vw' }} />
+                    <img src={logo} alt="logo" style={{ width: '4rem' }} />
                 </a>
             </div>
             <div className='listItems'>

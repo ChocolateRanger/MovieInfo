@@ -11,7 +11,7 @@
     display: inline-block;
     height: 30vh;
     width: 35vw;
-    object-fit: fill;
+    object-fit: contain;
     margin-right: 2vw;
 }
 
@@ -51,12 +51,12 @@
     margin: 6vh 8vw;
 }
 
-.section2{
+.section2 {
     margin-left: 5vw;
     margin-top: 10vh;
 }
 
-.header{
+.header {
     text-align: center;
     font-weight: 600;
     font-size: 1.5rem;
@@ -64,7 +64,7 @@
 }
 
 
-.Similar{
+.Similar {
     display: grid;
     grid-auto-columns: 30%;
     grid-column-gap: 10px;
@@ -74,13 +74,47 @@
     scroll-snap-type: x mandatory;
 }
 
-.SimilarItems{
+.SimilarItems {
     display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+    scroll-snap-align: start;
+    transition: all 0.2s;
+
+}
+
+@media screen and (max-width: 640px) {
+    .Similar {
+        display: flex;
         flex-direction: column;
-        background: var(--white);
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
-        scroll-snap-align: start;
-        transition: all 0.2s;
-    
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .MovieDescription {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .overview {
+        display: flex;
+        margin-top: 2vh;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .buttons {
+        margin: 2vh auto auto;
+    }
+
+    .description{
+        text-align: center;
+    }
+
 }

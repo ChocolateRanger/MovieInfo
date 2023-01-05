@@ -21,7 +21,7 @@ const MovieDesc = () => {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '65c5b56e26mshbcc5d572b32e4c4p189321jsn0aa90f9ff933',
+        'X-RapidAPI-Key': '24b60a68eemsh97443673e60fea2p14b638jsn8213714b5c09',
         'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
       }
     };
@@ -42,7 +42,7 @@ const MovieDesc = () => {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '65c5b56e26mshbcc5d572b32e4c4p189321jsn0aa90f9ff933',
+        'X-RapidAPI-Key': '24b60a68eemsh97443673e60fea2p14b638jsn8213714b5c09',
         'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
       }
     };

@@ -1,8 +1,10 @@
 .Navbar-container {
+    display: flex;
     border-bottom: 5px solid rgb(35, 229, 35);
     border-bottom-style: double;
     margin: 2vh 3vw 0;
     height: auto;
+    justify-content: space-between;
 
 }
 
@@ -13,16 +15,19 @@
 }
 
 .logo {
+    flex: 1;
     display: inline-block;
-    vertical-align: middle;
+    margin-left: 3vw;
 }
 
 .listItems {
-    display: inline;
-
+        display: flex;
+            justify-content: center;
+            align-items: center;
 }
 
 ul {
+    flex: 2;
     display: inline;
     list-style-type: none;
     margin: 0;
@@ -42,8 +47,7 @@ li {
 
 }
 
-li a,
-.dropbtn {
+li a {
     display: inline-block;
     color: rgb(93, 91, 91);
     text-align: center;
@@ -52,11 +56,20 @@ li a,
 
 }
 
-li a:hover,
-.dropdown:hover .dropbtn {
+li a:hover {
     color: rgb(35, 229, 35);
 }
 
-li.dropdown {
-    display: inline-block;
+@media  screen and (max-width : 430px) {
+    .Navbar-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .listItems{
+        justify-content: center;
+        align-items: center;
+    }
 }
