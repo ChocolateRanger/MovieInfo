@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import LoadMore from '../LoadMore/LoadMore'
 
-const MovieDesc = () => {
+const MovieDesc = (props) => {
 
   const navigate = useNavigate();
 
@@ -21,7 +21,7 @@ const MovieDesc = () => {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '24b60a68eemsh97443673e60fea2p14b638jsn8213714b5c09',
+        'X-RapidAPI-Key': `${props.apiKey}`,
         'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
       }
     };
@@ -42,7 +42,7 @@ const MovieDesc = () => {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '24b60a68eemsh97443673e60fea2p14b638jsn8213714b5c09',
+        'X-RapidAPI-Key': `${props.apiKey}`,
         'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
       }
     };

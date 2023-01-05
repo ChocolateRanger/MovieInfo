@@ -21,7 +21,7 @@ const MainPage = (props) => {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '24b60a68eemsh97443673e60fea2p14b638jsn8213714b5c09',
+        'X-RapidAPI-Key': `${props.apiKey}`,
         'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
       }
     };
@@ -47,7 +47,7 @@ const MainPage = (props) => {
     const options = {
       method: 'GET',
       headers: {
-        'X-RapidAPI-Key': '24b60a68eemsh97443673e60fea2p14b638jsn8213714b5c09',
+        'X-RapidAPI-Key': `${props.apiKey}`,
         'X-RapidAPI-Host': 'imdb8.p.rapidapi.com'
       }
     };
