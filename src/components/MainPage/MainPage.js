@@ -85,7 +85,9 @@ const MainPage = (props) => {
 
   return (
     <>
-      <Navbar />
+      <div style={{ position: 'sticky', top: '0', backgroundColor: 'white', zIndex: '1' }}>
+        <Navbar />
+      </div>
       {loading && <Loader />}
       <div className='CardContainer'>
         {!loading && result.map((element) => {

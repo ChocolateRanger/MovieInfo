@@ -17,7 +17,7 @@ const MovieDesc = (props) => {
   const [user, setUser] = useState("");
   const [mygenre, setmyGenre] = useState("")
 
-  const updateDetails = () => {
+  const updateDetails = async () => {
     const options = {
       method: 'GET',
       headers: {
@@ -32,13 +32,14 @@ const MovieDesc = (props) => {
         console.log(response)
         showGenre(response.genres + ' ');
         setmyGenre(response.genres);
+        console.log(showGenre);
         setDuration(response.runningTimeInMinutes ? response.runningTimeInMinutes + "mins" : "Time not specified");
         setPlot(response.plotOutline.text);
       })
       .catch(err => console.error(err));
   }
 
-  const LoadMoreMovies = () => {
+  const LoadMoreMovies = async () => {
     const options = {
       method: 'GET',
       headers: {
@@ -57,7 +58,6 @@ const MovieDesc = (props) => {
   }
 
   useEffect(() => {
-    updateDetails();
     LoadMoreMovies();
 
     // eslint-disable-line react-hooks/exhaustive-deps
@@ -73,7 +73,9 @@ const MovieDesc = (props) => {
 
   return (
     <>
-      <Navbar />
+      <div style={{position:'sticky', top:'0', backgroundColor:'white', zIndex:'1'}}>
+      <Navbar/>
+      </div>
       <div>
         {console.log(location.state)}
         <div className='MovieDescription'>

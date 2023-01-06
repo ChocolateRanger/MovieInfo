@@ -18,7 +18,7 @@ function App() {
           <Route exact path="/" element={<LoginPage key={LoginPage}/>} />
           <Route exact path="/home" element={<MainPage limit={limit} key={MainPage} apiKey={apiKey} />} />
           <Route exact path="/MovieDesc" element={<MovieDesc key={window.location.pathname} apiKey={apiKey} />} />
-          <Route exact path="/Genres" element={<Genres key={Genres} apiKey={apiKey} />} />
+          <Route exact path="/Genre" element={<Genres key={Genres} apiKey={apiKey} />} />
           
         </Routes>
       </BrowserRouter>
