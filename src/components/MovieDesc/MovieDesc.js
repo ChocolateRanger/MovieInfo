@@ -4,17 +4,19 @@ import './index.css'
 import { useState, useEffect } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 import LoadMore from '../LoadMore/LoadMore'
+import Loader from '../Loader/Loader'
 
 const MovieDesc = (props) => {
 
   const navigate = useNavigate();
 
+  const [loading, setLoading] = useState(true)
   const [genre, showGenre] = useState("");
   const [duration, setDuration] = useState("");
   const [plot, setPlot] = useState("")
   const location = useLocation();
   const [moreData, setMoreData] = useState([]);
-  const [user, setUser] = useState("");
+  // const [user, setUser] = useState("");
   const [mygenre, setmyGenre] = useState("")
 
   const updateDetails = async () => {
@@ -30,11 +32,12 @@ const MovieDesc = (props) => {
       .then(response => response.json())
       .then(response => {
         console.log(response)
-        showGenre(response.genres + ' ');
+        showGenre(response.genres + '');
         setmyGenre(response.genres);
         console.log(showGenre);
         setDuration(response.runningTimeInMinutes ? response.runningTimeInMinutes + "mins" : "Time not specified");
         setPlot(response.plotOutline.text);
+        setLoading(false);
       })
       .catch(err => console.error(err));
   }
@@ -53,6 +56,7 @@ const MovieDesc = (props) => {
       .then((response => {
         setMoreData(response.results);
         console.log(moreData);
+        setLoading(false);
       }))
       .catch(err => console.error(err));
   }
@@ -61,7 +65,7 @@ const MovieDesc = (props) => {
     LoadMoreMovies();
 
     // eslint-disable-line react-hooks/exhaustive-deps
-  }, [])
+  }, [mygenre])
 
   useEffect(() => {
     updateDetails();
@@ -76,6 +80,7 @@ const MovieDesc = (props) => {
       <div style={{position:'sticky', top:'0', backgroundColor:'white', zIndex:'1'}}>
       <Navbar/>
       </div>
+      {loading && <Loader />}
       <div>
         {console.log(location.state)}
         <div className='MovieDescription'>
@@ -107,7 +112,6 @@ const MovieDesc = (props) => {
 
           <div className='Similar'>
             {moreData.map((e) => {
-
               const toMovieDesc = () => {
                 let movieid = e.id;
                 console.log(e.title)
@@ -120,7 +124,8 @@ const MovieDesc = (props) => {
 
               return <div className='SimilarItems' key={e.id} onClick={() => {
                 toMovieDesc();
-                setUser({ ...user });
+                setLoading(true)
+                // setUser({ ...user });
 
               }}>
                 <LoadMore image={e.image.url
