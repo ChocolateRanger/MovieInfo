@@ -14,7 +14,7 @@
 
 .container {
     height: 50vh;
-    width: 50vw;
+    width: 30rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -33,13 +33,15 @@
     border-radius: 0.5vw;
     border: 1px solid rgb(200, 195, 195);
     height: 4vh;
-    width: 20vw;
-    padding: 0 2vw;
+    width: 11rem;
+    padding: 0 10px;
 }
 
 .headerlogin {
     text-align: center;
     font-weight: bold;
+    text-transform: uppercase;
+    word-spacing: 5px;
 }
 
 .btn {
@@ -57,6 +59,15 @@
     font-size: .8rem;
     padding: .6vh;
     border: 1px solid rgb(67, 226, 67);
+}
+
+.btnlogin:hover{
+    box-shadow: 0 2px 5px rgb(0, 0, 0);
+}
+
+.btnlogin:focus{
+    outline: none;
+    border: none;
 }
 
 @media screen and (max-width:640px) {

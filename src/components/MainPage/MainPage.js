@@ -57,7 +57,7 @@ const MainPage = (props) => {
       }
     };
 
-    fetch(`https://imdb8.p.rapidapi.com/title/v2/find?title=game%20of&limit=${props.limit}&sortArg=moviemeter%2Casc`, options)
+    fetch(`https://imdb8.p.rapidapi.com/title/v2/find?title=game%20of&limit=${props.limit}&sortArg=moviemeter%2Casc&currentCountry=IN`, options)
       .then(response => response.json())
       .then((response => {
         console.log(response);

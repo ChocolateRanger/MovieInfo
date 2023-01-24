@@ -1,9 +1,7 @@
 .card {
     width: 20vw;
     height: 45vh;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
     transition: 0.3s;
-    /* border-radius: 5px; */
     border: 2px solid white;
     margin: 3vh 3vw;
     overflow: scroll;
@@ -21,17 +19,17 @@
 }
 
 .images {
-    padding: 1.2rem 5px 0;
+    padding:0;
     border-radius: 5px 5px 0 0;
     height: auto;
-    width: 20vw;
+    width: auto;
     object-fit: contain;
 }
 
 .details {
     width: 100%;
     height: 100%;
-    padding: 2px 16px;
+    padding: 2px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -49,11 +47,11 @@
 
 @media screen and (max-width: 640px) {
     .card {
-        width: 60vw;
+        width: auto;
         height: auto;
     }
     .images {
-        width: 60vw;
+        width: fi;
     }
 
 }

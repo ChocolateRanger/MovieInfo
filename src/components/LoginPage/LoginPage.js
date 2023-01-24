@@ -45,7 +45,7 @@ const LoginPage = () => {
                 <div className='container'>
                     <div className='headerlogin'>
                         <h2>
-                            Sign in to your account
+                            Sign in
                         </h2>
 
                     </div>
